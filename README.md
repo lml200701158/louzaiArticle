@@ -1,7 +1,5 @@
 ![](https://files.mdnice.com/user/13837/420eeba6-5d64-4d64-88e8-48d995a33647.png)
 
-> 更新时间：2022.05.11
-
 大家好，我是楼仔！
 
 一百多篇原创好文，近 2 年的坚持，**无论你是小白，还是资深大佬，总能找到属于你自己的段位。**
@@ -13,24 +11,31 @@
 
 [硬核来袭，Java 全套学习资料（14W 字），耗时半年整理](https://mp.weixin.qq.com/s?__biz=Mzg3OTU5NzQ1Mw==&mid=2247486095&idx=1&sn=6a9bc64371add8c48ab1a8d6265ee4cf&chksm=cf03486df874c17b61687cbbe236831fb6fe73e9aef6b7818f9cb20b07e3d39ac21f55a0b2e7&token=1333208047&lang=zh_CN#rd) 🔥🔥🔥
 
-[我肝了 2 个月，为你整理了 Java 并发编程手册](https://mp.weixin.qq.com/s/BWRUFg28SINxrSK_kcPxxg)
+[全网最强 JVM 来袭！](https://mp.weixin.qq.com/s?__biz=Mzg3OTU5NzQ1Mw==&mid=2247488282&idx=1&sn=a5247ff61e8379790b509e49b24199f2&chksm=cf0351f8f874d8ee21f2f6d7f8d4e3e96915cc028adf27caf6ff0be1747b11168e07e434b2e3&token=950555629&lang=zh_CN#rd) 🔥🔥
 
-[如何啃下 JVM 这座大山，完结撒花！](https://mp.weixin.qq.com/s?__biz=Mzg3OTU5NzQ1Mw==&mid=2247486917&idx=1&sn=f2e460c4538df9bb1e3dd41094e984cf&chksm=cf034f27f874c6319a244ab27030af184b69c8f23833ae7f73be37786002534c4a4e28e21007&token=1333208047&lang=zh_CN#rd)
+[我肝了 2 个月，为你整理了 Java 并发编程手册](https://mp.weixin.qq.com/s/BWRUFg28SINxrSK_kcPxxg)
 
 > Go 语言教程，**汇总 13 篇文章，耗时 3 个月整理**。
 
 [我肝了三个月，为你写出了 Go 核心手册](https://mp.weixin.qq.com/s?__biz=Mzg3OTU5NzQ1Mw==&mid=2247485840&idx=1&sn=d065d2e91b182cf566faf05f64ad728c&chksm=cf034b72f874c26411b97930b1d5d56117368cfc6061fed991fbc28c7cb9d2cf7a52e04c7de2&token=1333208047&lang=zh_CN#rd) 🔥
 
 ## 高并发（2-5 年）
-> **进大厂必备知识**，预计 8-10 篇，连载中。
+> 进大厂必备知识，**汇总 7 篇，耗时 3 个月**。
 
-[如何保障 MySQL 和 Redis 的数据一致性？](https://mp.weixin.qq.com/s?__biz=Mzg3OTU5NzQ1Mw==&mid=2247487489&idx=1&sn=67a85678dd14699ae29c7f5ab87fbfb0&chksm=cf0352e3f874dbf5f27cb548ff7bcb725ea23ae8792e965f90a9a304d016c7bab4747da60dbf&token=1760780777&lang=zh_CN#rd) 🔥🔥
+[聊聊限流](https://mp.weixin.qq.com/s?__biz=Mzg3OTU5NzQ1Mw==&mid=2247487439&idx=1&sn=87beaedb8a8024615f0674c1cf88ca02&chksm=cf034d2df874c43bc2a928e856ebd7dc3f17742e425bb192e3e410f4c15ee4ab195f13e8c706#rd) 🔥🔥
 
-[聊聊限流](https://mp.weixin.qq.com/s?__biz=Mzg3OTU5NzQ1Mw==&mid=2247487439&idx=1&sn=87beaedb8a8024615f0674c1cf88ca02&chksm=cf034d2df874c43bc2a928e856ebd7dc3f17742e425bb192e3e410f4c15ee4ab195f13e8c706&token=1760780777&lang=zh_CN#rd) 🔥
+[缓存雪崩、击穿、穿透](https://mp.weixin.qq.com/s?__biz=Mzg3OTU5NzQ1Mw==&mid=2247487819&idx=1&sn=050954a62d6f6bec57c931ef2170f9f4&chksm=cf0353a9f874dabfeea08d22e5beee017f7efe024bdf3d0cbcfd104926c52e4537075af08c02#rd) 🔥
 
-[聊聊分库分表](https://mp.weixin.qq.com/s?__biz=Mzg3OTU5NzQ1Mw==&mid=2247487707&idx=1&sn=3cbc82079d9838664d8d4b9bf4d81b28&chksm=cf035239f874db2f6561624361c3e928629f3a664b42d94b5cc16824f710d11f998ed4cb44f3&token=1760780777&lang=zh_CN#rd) 
+[Redis 高可用](https://mp.weixin.qq.com/s?__biz=Mzg3OTU5NzQ1Mw==&mid=2247488519&idx=1&sn=c082f8f8a5442e622f5c82af63994359&chksm=cf0356e5f874dff3ba81f06e4387d76a5ebbdd1ca0799a2699832aa15c29258abf3abed9fee5&token=950555629&lang=zh_CN#rd) 🔥
 
-[淘宝 10 年，高并发分布式架构演进之路](https://mp.weixin.qq.com/s?__biz=Mzg3OTU5NzQ1Mw==&mid=2247487292&idx=1&sn=b3f5f5eafd190d3aa79d729e687054e2&chksm=cf034ddef874c4c8409e1036bd1aa008b24b97611ba624aceae7dea8d415cca9ce2e0b097b1f&token=1760780777&lang=zh_CN#rd)
+[分库分表](https://mp.weixin.qq.com/s?__biz=Mzg3OTU5NzQ1Mw==&mid=2247488080&idx=1&sn=35a14120bdacace4b06b6f83537a1b63&chksm=cf0350b2f874d9a40a72d06ab7ad6e8c5305f18cd2d4ed2dcce7031668cc1e0c0b77303c0d6c&token=950555629&lang=zh_CN#rd)
+
+[MySQL 主从](https://mp.weixin.qq.com/s?__biz=Mzg3OTU5NzQ1Mw==&mid=2247488080&idx=2&sn=6eb4a0acbb388a22ce75bba982d9e206&chksm=cf0350b2f874d9a440204d399ff418bd2fee2d9740d6be48f15e37eee3f1e2154fcc3eb33b7e&token=950555629&lang=zh_CN#rd)
+
+[MySQL 和 Redis 一致性](https://mp.weixin.qq.com/s?__biz=Mzg3OTU5NzQ1Mw==&mid=2247487489&idx=1&sn=67a85678dd14699ae29c7f5ab87fbfb0&chksm=cf0352e3f874dbf5f27cb548ff7bcb725ea23ae8792e965f90a9a304d016c7bab4747da60dbf#rd) 🔥🔥
+
+[高并发分布式架构演进](https://mp.weixin.qq.com/s?__biz=Mzg3OTU5NzQ1Mw==&mid=2247487292&idx=1&sn=b3f5f5eafd190d3aa79d729e687054e2&chksm=cf034ddef874c4c8409e1036bd1aa008b24b97611ba624aceae7dea8d415cca9ce2e0b097b1f#rd)
+
 
 ## 架构选型（6年 +）
 > **转载最多的系列**，涉及十几种常用开源软件，超硬核！
@@ -45,7 +50,7 @@
 
 [RPC 框架从原理到选型，一文带你搞懂 RPC](https://mp.weixin.qq.com/s/ll4nUVB28KpyTMS93xAckQ) 
 
-[领域驱动设计：从理论到实践，一文带你掌握 DDD！](https://mp.weixin.qq.com/s?__biz=Mzg3OTU5NzQ1Mw==&mid=2247485677&idx=1&sn=0f18a20b72e01accdc7e6429b55b7423&chksm=cf034a0ff874c319e4ffbe1dee3851acfd6600bb0c05807226f0bc750a1e281784da3f7b9723&token=1333208047&lang=zh_CN#rd) 
+[肝了一个月的 DDD，一文带你掌握！](https://mp.weixin.qq.com/s?__biz=Mzg3OTU5NzQ1Mw==&mid=2247487929&idx=1&sn=e33ca9ee496ef4ecb159a719223259a7&chksm=cf03535bf874da4d72568c2e6235be9084bcd71227f33d588f1019e4a1a4f10e482d44e7bbb1&token=950555629&lang=zh_CN#rd) 
 
 
 ## 基础技术（2-4 年）
@@ -53,13 +58,9 @@
 
 [Raft 协议原理详解，10 分钟带你掌握！](https://mp.weixin.qq.com/s?__biz=Mzg3OTU5NzQ1Mw==&mid=2247487178&idx=1&sn=f2dee0ed272ef6902aede55b2b5baa02&chksm=cf034c28f874c53e8c7d5ca2cf1a8cc918d2d9f5dc6bf19e06e35222bdb3035fa377e6f003bb&token=1760780777&lang=zh_CN#rd) 🔥🔥
 
-[消息队列：从选型到原理，一文带你全部掌握](https://mp.weixin.qq.com/s?__biz=Mzg3OTU5NzQ1Mw==&mid=2247487669&idx=1&sn=7225d0d5613e33a1b1daf18083d04ca1&chksm=cf035257f874db411cb301382934d73bb1e4b8fc2f584335d65535e9c173f7e5e7e1d6b5286b&token=1760780777&lang=zh_CN#rd)
-
-[Redis：你真的会 Redis 么，一文告诉你如何学习](https://mp.weixin.qq.com/s?__biz=Mzg3OTU5NzQ1Mw==&mid=2247486570&idx=1&sn=08714e325a1a7056a2e0ec864cad7fa7&chksm=cf034e88f874c79ef260f5d5707b86969cb111d5245b0b8f4c263e94740e9fa1634abf83ffda&token=1333208047&lang=zh_CN#rd)
-
-[MySQL：资料大放送，告诉你如何学习 MySQL](https://mp.weixin.qq.com/s?__biz=Mzg3OTU5NzQ1Mw==&mid=2247486537&idx=1&sn=039402e5a07dace3c59642b4280edab1&chksm=cf034eabf874c7bd42b920206c8b9dc6252a47c86686774d745f868fc7f7cc63ac505ece3129&token=1333208047&lang=zh_CN#rd)
-
 [常用设计模式汇总，告诉你如何学习设计模式](https://mp.weixin.qq.com/s?__biz=Mzg3OTU5NzQ1Mw==&mid=2247486053&idx=1&sn=717cbc791ae7a40a41286352f562a86f&chksm=cf034887f874c1911efdcad1895b4ce51fb180f5878fb3ab020162c316ba461f69e80d00534e&token=1333208047&lang=zh_CN#rd)
+
+[消息队列：从选型到原理，一文带你全部掌握](https://mp.weixin.qq.com/s?__biz=Mzg3OTU5NzQ1Mw==&mid=2247485959&idx=1&sn=7bd52a53ec37face8984ba6bf52744c9&chksm=cf0348e5f874c1f3ee0d4f8eab4997d35e46b91fb0106b331a208409fd308aa15f8f3ef6b0d4&token=950555629&lang=zh_CN#rd) 🔥🔥
 
 [肝了一个月的 ETCD，从 Raft 原理到实践](https://mp.weixin.qq.com/s?__biz=Mzg3OTU5NzQ1Mw==&mid=2247485759&idx=1&sn=41957e94a2c69426befafd373fbddcc5&chksm=cf034bddf874c2cb52a7aafea5cd194e70308c7d4ad74183db8a36d3747122be1c7a31b84ee3&token=1333208047&lang=zh_CN#rd) 
 
@@ -91,4 +92,4 @@
 
 长按二维码，回复 **「加群」**，欢迎一起学习交流哈~~ 👏🏻👏🏻👏🏻
 
-![](https://files.mdnice.com/user/13837/24973610-4a3d-497a-9590-5a45d8204cb4.png)
+![](https://files.mdnice.com/user/13837/a14dda8d-513c-4581-b0d5-5542b0622d22.png)
