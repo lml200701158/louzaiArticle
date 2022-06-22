@@ -1,153 +1,90 @@
-![](https://files.mdnice.com/user/13837/e51c51a6-46fb-4011-b8b3-85d09961c703.png)
+![](https://files.mdnice.com/user/13837/420eeba6-5d64-4d64-88e8-48d995a33647.png)
 
 大家好，我是楼仔！
 
-Redis 的高可用，太重要啦！之前找工作面试，这个问题面试的频率都能排到前几，尤其是一些大厂，**先不要着急看文章，如果面试官给你抛这么个问题，你会怎么回答呢，可以先想 5 分钟。**
+一百多篇原创好文，近 2 年的坚持，**无论你是小白，还是资深大佬，总能找到属于你自己的段位。**
 
-这里要等待 5 分钟 ...
+楼仔出品，必属精品，如需转载，请与我联系。
 
-其实我也可以偷个懒，完全转载其它博客，但是没有找到我想要的，**为了不辜负广大粉丝，楼哥还是单独给大家写一篇**，主要根据这块知识，再结合之前的一些面试情况，给大家唠唠。
+## 语言体系（0-4 年）
+> Java 进阶资料，**汇总 49 篇文章，耗时半年整理**。
 
-# 1. Redis 分片策略
-## 1.1 Hash 分片
-我们都知道，对于 Redis 集群，我们需要通过 hash 策略，将 key 打在 Redis 的不同分片上。
+[硬核来袭，Java 全套学习资料（14W 字），耗时半年整理](https://mp.weixin.qq.com/s?__biz=Mzg3OTU5NzQ1Mw==&mid=2247486095&idx=1&sn=6a9bc64371add8c48ab1a8d6265ee4cf&chksm=cf03486df874c17b61687cbbe236831fb6fe73e9aef6b7818f9cb20b07e3d39ac21f55a0b2e7&token=1333208047&lang=zh_CN#rd) 🔥🔥🔥
 
-假如我们有 3 台机器，常见的分片方式为 hash(IP)%3，其中 3 是机器总数。
+[全网最强 JVM 来袭！](https://mp.weixin.qq.com/s?__biz=Mzg3OTU5NzQ1Mw==&mid=2247488282&idx=1&sn=a5247ff61e8379790b509e49b24199f2&chksm=cf0351f8f874d8ee21f2f6d7f8d4e3e96915cc028adf27caf6ff0be1747b11168e07e434b2e3&token=950555629&lang=zh_CN#rd) 🔥🔥
 
-![](https://files.mdnice.com/user/13837/ba500a2a-210e-47e0-9bec-30381c787418.png)
+[我肝了 2 个月，为你整理了 Java 并发编程手册](https://mp.weixin.qq.com/s/BWRUFg28SINxrSK_kcPxxg)
 
-目前很多小公司都这么玩，上手快，简单粗暴，但是这种方式有一个致命的缺点：**当增加或者减少缓存节点时，总节点个数发生变化，导致分片值发生改变，需要对缓存数据做迁移。**
+> Go 语言教程，**汇总 13 篇文章，耗时 3 个月整理**。
 
-那如何解决该问题呢，答案是一致性 Hash。
+[我肝了三个月，为你写出了 Go 核心手册](https://mp.weixin.qq.com/s?__biz=Mzg3OTU5NzQ1Mw==&mid=2247485840&idx=1&sn=d065d2e91b182cf566faf05f64ad728c&chksm=cf034b72f874c26411b97930b1d5d56117368cfc6061fed991fbc28c7cb9d2cf7a52e04c7de2&token=1333208047&lang=zh_CN#rd) 🔥
 
-## 1.2 一致性 Hash
-一致性哈希算法是 1997 年由麻省理工学院提出的一种分布式哈希实现算法。
+## 高并发（2-5 年）
+> 进大厂必备知识，**汇总 7 篇，耗时 3 个月**。
 
-**环形空间**：按照常用的 hash 算法来将对应的 key 哈希到一个具有 2^32 次方个桶的空间中，即 0~(2^32)-1 的数字空间中，现在我们可以将这些数字头尾相连，想象成一个闭合的环形。
+[聊聊限流](https://mp.weixin.qq.com/s?__biz=Mzg3OTU5NzQ1Mw==&mid=2247487439&idx=1&sn=87beaedb8a8024615f0674c1cf88ca02&chksm=cf034d2df874c43bc2a928e856ebd7dc3f17742e425bb192e3e410f4c15ee4ab195f13e8c706#rd) 🔥🔥
 
-![](https://files.mdnice.com/user/13837/b9a9ae2f-f461-4b6c-97bb-e4fd4ac9d16e.png)
+[缓存雪崩、击穿、穿透](https://mp.weixin.qq.com/s?__biz=Mzg3OTU5NzQ1Mw==&mid=2247487819&idx=1&sn=050954a62d6f6bec57c931ef2170f9f4&chksm=cf0353a9f874dabfeea08d22e5beee017f7efe024bdf3d0cbcfd104926c52e4537075af08c02#rd) 🔥
 
-**Key 散列 Hash 环**：现在我们将 object1、object2、object3、object4 四个对象通过特定的 Hash 函数计算出对应的 key 值，然后散列到 Hash 环上。
+[Redis 高可用](https://mp.weixin.qq.com/s?__biz=Mzg3OTU5NzQ1Mw==&mid=2247488519&idx=1&sn=c082f8f8a5442e622f5c82af63994359&chksm=cf0356e5f874dff3ba81f06e4387d76a5ebbdd1ca0799a2699832aa15c29258abf3abed9fee5&token=950555629&lang=zh_CN#rd) 🔥
 
+[分库分表](https://mp.weixin.qq.com/s?__biz=Mzg3OTU5NzQ1Mw==&mid=2247488080&idx=1&sn=35a14120bdacace4b06b6f83537a1b63&chksm=cf0350b2f874d9a40a72d06ab7ad6e8c5305f18cd2d4ed2dcce7031668cc1e0c0b77303c0d6c&token=950555629&lang=zh_CN#rd)
 
-![](https://files.mdnice.com/user/13837/88628c9e-612f-4853-ba1c-87e6ff3b1fa6.png)
+[MySQL 主从](https://mp.weixin.qq.com/s?__biz=Mzg3OTU5NzQ1Mw==&mid=2247488080&idx=2&sn=6eb4a0acbb388a22ce75bba982d9e206&chksm=cf0350b2f874d9a440204d399ff418bd2fee2d9740d6be48f15e37eee3f1e2154fcc3eb33b7e&token=950555629&lang=zh_CN#rd)
 
-**机器散列 Hash 环**：假设现在有 NODE1、NODE2、NODE3 三台机器，以顺时针的方向计算，将所有对象存储到离自己最近的机器中，object1 存储到了 NODE1，object3 存储到了 NODE2，object2、object4 存储到了 NODE3。
+[MySQL 和 Redis 一致性](https://mp.weixin.qq.com/s?__biz=Mzg3OTU5NzQ1Mw==&mid=2247487489&idx=1&sn=67a85678dd14699ae29c7f5ab87fbfb0&chksm=cf0352e3f874dbf5f27cb548ff7bcb725ea23ae8792e965f90a9a304d016c7bab4747da60dbf#rd) 🔥🔥
 
-![](https://files.mdnice.com/user/13837/51f87f62-da2f-4566-9e01-c6966a76397c.png)
+[高并发分布式架构演进](https://mp.weixin.qq.com/s?__biz=Mzg3OTU5NzQ1Mw==&mid=2247487292&idx=1&sn=b3f5f5eafd190d3aa79d729e687054e2&chksm=cf034ddef874c4c8409e1036bd1aa008b24b97611ba624aceae7dea8d415cca9ce2e0b097b1f#rd)
 
-**节点删除**：如果 NODE2 出现故障被删除了，object3 将会被迁移到 NODE3 中，这样仅仅是 object3 的映射位置发生了变化，其它的对象没有任何的改动。
 
-![](https://files.mdnice.com/user/13837/46077da4-1a06-4f91-8f21-b8ad64bdab67.png)
+## 架构选型（6年 +）
+> **转载最多的系列**，涉及十几种常用开源软件，超硬核！
 
-**添加节点**：如果往集群中添加一个新的节点 NODE4，object2 被迁移到了 NODE4 中，其它对象保持不变。
+[消息队列：从选型到原理，一文带你全部掌握](https://mp.weixin.qq.com/s?__biz=Mzg3OTU5NzQ1Mw==&mid=2247487669&idx=1&sn=7225d0d5613e33a1b1daf18083d04ca1&chksm=cf035257f874db411cb301382934d73bb1e4b8fc2f584335d65535e9c173f7e5e7e1d6b5286b&token=1760780777&lang=zh_CN#rd) 🔥🔥🔥
 
-![](https://files.mdnice.com/user/13837/24e17cd4-a9d8-404f-aa2b-ea7334a2942c.png)
+[微服务网关：从对比到选型，由理论到实践](https://mp.weixin.qq.com/s?__biz=Mzg3OTU5NzQ1Mw==&mid=2247486746&idx=1&sn=90bc94797d539b5724b55c9dda075de3&chksm=cf034ff8f874c6ee8d03b915a164e1755103f13270d95e8c32b3e325b990bccdd397929a9faf#rd) 🔥
 
-通过对节点的添加和删除的分析，**一致性哈希算法在保持了单调性的同时，还使数据的迁移达到了最小，这样的算法对分布式集群来说是非常合适的，避免了大量数据迁移，减小了服务器的的压力。**
+[5 种注册中心如何选型？从原理给你解读！](https://mp.weixin.qq.com/s?__biz=Mzg3OTU5NzQ1Mw==&mid=2247486918&idx=1&sn=5651cd0b4b9c8e68bcfa55c00c0950d6&chksm=cf034f24f874c632511684057337a744c54702543ec3690aa06dbf4bbaf980b2828f52276c9b#rd) 🔥
 
-> 如果机器个数太少，为了避免大量数据集中在几台机器，实现平衡性，可以建立虚拟节点（比如一台机器建立 3-4 个虚拟节点），然后对虚拟节点进行 Hash。
+[配置中心：从原理到选型，让你彻底搞懂](https://mp.weixin.qq.com/s/1D-X6MyMxZriX7NkYWS5zA) 
 
-# 2. 高可用方案
+[RPC 框架从原理到选型，一文带你搞懂 RPC](https://mp.weixin.qq.com/s/ll4nUVB28KpyTMS93xAckQ) 
 
-很多时候，公司只给我们提供一套 Redis 集群，至于如何计算分片，我们一般有 2 套成熟的解决方案。
+[肝了一个月的 DDD，一文带你掌握！](https://mp.weixin.qq.com/s?__biz=Mzg3OTU5NzQ1Mw==&mid=2247487929&idx=1&sn=e33ca9ee496ef4ecb159a719223259a7&chksm=cf03535bf874da4d72568c2e6235be9084bcd71227f33d588f1019e4a1a4f10e482d44e7bbb1&token=950555629&lang=zh_CN#rd) 
 
-**客户端方案**：也就是客户端自己计算 Redis 分片，无论你使用Hash 分片，还是一致性 Hash，都是由客户端自己完成。
 
-客户端方案简单粗暴，但是只能在单一语言系统之间复用，如果你使用的是 PHP 的系统，后来 Java 也需要使用，你需要用 Java 重新写一套分片逻辑。
+## 基础技术（2-4 年）
+> **小白必看系列**，程序员必备技能。
 
-**为了解决多语言、不同平台复用的问题**，就衍生出中间代理层方案。
+[Raft 协议原理详解，10 分钟带你掌握！](https://mp.weixin.qq.com/s?__biz=Mzg3OTU5NzQ1Mw==&mid=2247487178&idx=1&sn=f2dee0ed272ef6902aede55b2b5baa02&chksm=cf034c28f874c53e8c7d5ca2cf1a8cc918d2d9f5dc6bf19e06e35222bdb3035fa377e6f003bb&token=1760780777&lang=zh_CN#rd) 🔥🔥
 
+[常用设计模式汇总，告诉你如何学习设计模式](https://mp.weixin.qq.com/s?__biz=Mzg3OTU5NzQ1Mw==&mid=2247486053&idx=1&sn=717cbc791ae7a40a41286352f562a86f&chksm=cf034887f874c1911efdcad1895b4ce51fb180f5878fb3ab020162c316ba461f69e80d00534e&token=1333208047&lang=zh_CN#rd)
 
-**中间代理层方案**：将客户端解决方案的经验移植到代理层中，通过通用的协议（如 Redis 协议）来实现在其他语言中的复用，**用户无需关心缓存的高可用如何实现，只需要依赖你的代理层即可。**
+[消息队列：从选型到原理，一文带你全部掌握](https://mp.weixin.qq.com/s?__biz=Mzg3OTU5NzQ1Mw==&mid=2247485959&idx=1&sn=7bd52a53ec37face8984ba6bf52744c9&chksm=cf0348e5f874c1f3ee0d4f8eab4997d35e46b91fb0106b331a208409fd308aa15f8f3ef6b0d4&token=950555629&lang=zh_CN#rd) 🔥🔥
 
-代理层主要负责读写请求的路由功能，并且在其中内置了一些高可用的逻辑。
+[肝了一个月的 ETCD，从 Raft 原理到实践](https://mp.weixin.qq.com/s?__biz=Mzg3OTU5NzQ1Mw==&mid=2247485759&idx=1&sn=41957e94a2c69426befafd373fbddcc5&chksm=cf034bddf874c2cb52a7aafea5cd194e70308c7d4ad74183db8a36d3747122be1c7a31b84ee3&token=1333208047&lang=zh_CN#rd) 
 
-![](https://files.mdnice.com/user/13837/2502af34-6ed7-4914-88d4-ddcbaed94a0e.png)
+[从原理到实践，手把手教你使用 RabbitMQ](https://mp.weixin.qq.com/s/adse6qpIiK0RE-Ebo-z5_Q)
 
+## 软技能（4年 +）
+> 很多技术大佬，这方面可能比较欠缺。
 
-> 你可以看看，你们公司的 Redis 使用的是哪种方案呢？对于“客户端方案”，其实有的也不用自己去写，比如负责维护 Redis 的部门会提供不同语言的 SDK，你只需要去集成对应的 SDK 即可。
+[如何写好文档，5 分钟带你掌握！](https://mp.weixin.qq.com/s?__biz=Mzg3OTU5NzQ1Mw==&mid=2247487346&idx=1&sn=3c1ac02a06f33c4c8cbe8910a5df0497&chksm=cf034d90f874c486251088e51ac159d34ac16fe84d73258dd9606edcaa0f14c664c676577d5f&token=1760780777&lang=zh_CN#rd) 🔥
 
-# 3. 高可用原理
+[2 年经验总结，告诉你如何做好项目管理](https://mp.weixin.qq.com/s?__biz=Mzg3OTU5NzQ1Mw==&mid=2247486333&idx=1&sn=2cb1e47ea18c69c19f777b112edd8373&chksm=cf03499ff874c0891c1080db241a8cec1a3e30db48e522d93be684a94d1705b9ac7b3b308b1b&token=1333208047&lang=zh_CN#rd) 
 
-## 3.1 Redis 主从
+[只会用传统开发模式？10 分钟教你玩转敏捷！](https://mp.weixin.qq.com/s?__biz=Mzg3OTU5NzQ1Mw==&mid=2247487115&idx=1&sn=0bc2986b5e31dd25f9f9aaba97090c67&chksm=cf034c69f874c57fc85e2b90b0a60c93338011b119331977dd3291d3e3d943f8b8abe8e42bca&token=851464442&lang=zh_CN#rd)
 
-Redis 基本都通过“主 - 从”模式进行部署，**主从库之间采用的是读写分离的方式。**
+[项目又延期了？告诉你如何做好项目风险控制](https://mp.weixin.qq.com/s?__biz=Mzg3OTU5NzQ1Mw==&mid=2247486720&idx=1&sn=a333c8004e119cc2302d11133ea940b3&chksm=cf034fe2f874c6f4bc6959903970c709cb0bd3e806a740130d2b0f931756a8675e539b961de0&scene=178&cur_album_id=2220718105406865410#rd)
 
-![](https://files.mdnice.com/user/13837/f514d084-e620-409c-93c2-0e428b1d579e.png)
+## 个人思考
+> **必读系列，内驱力源于这里！**
 
-同 MySQL 类似，**主库支持写和读，从库只支持读，数据会先写到主库，然后定时同步给从库**，具体的同步规则，主要将 RDB 日志从主库同步给从库，然后从库读取 RDB 日志，这里比较复杂，其中还涉及到 replication buffer，就不再展开。
+[聊聊如何学习](https://mp.weixin.qq.com/s?__biz=Mzg3OTU5NzQ1Mw==&mid=2247487579&idx=1&sn=3a80950dd00734c820dcad0e52aa1ab6&chksm=cf0352b9f874dbaf786fff016dd465a4179c5f064b9f41dfb2fb98e6e1ba09f123d942767e20&token=1760780777&lang=zh_CN#rd) 🔥🔥
 
-这里有个问题，一次同步过程中，主库需要完成 2 个耗时操作：生成 RDB 文件和传输 RDB 文件。
+[如何看待程序员35岁职业危机？](https://mp.weixin.qq.com/s?__biz=Mzg3OTU5NzQ1Mw==&mid=2247486122&idx=1&sn=d5d28e0035ca144347027135187fbd11&chksm=cf034848f874c15ea26fb210fdefbef2491f9eed10694f7def52eb8013cfd91762ebe07f0e30&scene=178&cur_album_id=1886359370259611652#rd) 🔥
 
-如果从库数量过多，主库忙于 fock 子进程生成 RDB 文件和数据同步，会阻塞主库正常请求。
-
-这个如何解决呢？**答案是 “主 - 从 - 从” 模式。**
-
-为了避免所有从库都从主库同步 RDB 日志，可以借助从库来完成同步：比如新增 3、4 两个 Slave，可以**等 Slave 2 同步完后，再通过 Slave 2 同步给 Slave 3 和 Slave 4。**
-
-![](https://files.mdnice.com/user/13837/7a4ffe72-6eea-4221-a0bc-9ea95ad5f57b.png)
-
-如果我是面试官，我可能会继续问，如果数据同步了 80%，网络突然中断，当网络后续又恢复后，Redis 会如何操作呢？
-
-## 3.2 Redis 分片
-这个有点像 MySQL 分库分表，将数据存储到不同的地方，避免查询时全部集中到一个实例。
-
-![](https://files.mdnice.com/user/13837/51f85442-8566-4d51-bf15-0a4f2b5de3c8.png)
-
-其实还有一个好处，就是数据进行主从同步时，如果 RDB 数据过大，会严重阻塞主线程，如果用分片的方式，可以将数据分摊，比如原来有 10 GB 的数据，分摊后，每个分片只有 2 GB。
-
-可能有同学会问，Redis 分片，和“主 - 从”模式有啥关系呢？ 你可以理解，**图中的每个分片都是主库，每个分片都有自己的“主 - 从”模式结构。**
-
-那么数据如何找到对应的分片呢，前面其实已经讲过，假如我们有 3 台机器，常见的分片方式为 hash(IP)%3，其中 3 是机器总数，hash 值为机器 IP，这样每台机器就有自己的分片号。
-
-![](https://files.mdnice.com/user/13837/ba500a2a-210e-47e0-9bec-30381c787418.png)
-
-对于 key，也可以采用同样的方式，找到对应的机器分片号 hash(key)%3，hash 算法有很多，可以用 CRC16(key)，也可以直接取 key 中的字符，通过 ASCII 码转换成数字。
-
-## 3.3 Redis 哨兵机制
-
-#### 3.3.1 什么是哨兵机制 ？
-
-在主从模式下，如果 master 宕机了，从库不能从主库同步数据，主库也不能提供读写功能。
-
-![](https://files.mdnice.com/user/13837/0d97559a-af1d-4f9b-8aad-de2cac619a2f.png)
-
-**怎么办呢 ？这时就需要引入哨兵机制 ！**
-
-**哨兵节点是特殊的 Redis 服务，不提供读写服务，主要用来监控 Redis 实例节点。** 
-
-![](https://files.mdnice.com/user/13837/da193d73-cf37-4686-ac9d-ceeb40499419.png)
-
-
-那么当 master 宕机，哨兵如何执行呢？
-
-#### 3.3.2 判断主机下线
-
-哨兵进程会使用 PING 命令检测它自己和主、从库的网络连接情况，用来判断实例的状态，如果哨兵发现主库或从库对 PING 命令的响应超时了，哨兵就会先把它标记为“主观下线”。
-
-那是否一个哨兵判断为“主观下线”，就直接下线 master 呢？
-
-答案肯定是不行的，需要遵循 “少数服从多数” 原则：**有 N/2+1 个实例判断主库“主观下线”，才判定主库为“客观下线”。**
-
-![](https://files.mdnice.com/user/13837/166ededa-e4ff-4394-b80b-78d51d69bd01.png)
-
-比如上图有 3 个哨兵，有 2 个判断 “主观下线”，那么就标记主库为 “客观下线”。
-
-#### 3.3.3 选取新主库
-
-我们有 5 个从库，需要选取一个最优的从库作为主库，分 2 步：
-- **筛选**：检查从库的当前在线状态和之前的网络连接状态，过滤不适合的从库；
-- **打分**：根据从库优先级、和旧主库的数据同步接近度进行打分，选最高分作为主库。
-
-![](https://files.mdnice.com/user/13837/cde345e8-11d1-46cb-959f-d1a4c5bebf48.png)
-
-**如果分数一致怎么办 ？** Redis 也有一个策略：ID 号最小的从库得分最高，会被选为新主库。
-
-当 slave 3 选举为新主库后，**会通知其它从库和客户端，对外宣布自己是新主库**，大家都得听我的哈！
-
-今天就讲这么多，我们下期见，大家都学废了么 ？
-
+[再见2021，你好2022！](https://mp.weixin.qq.com/s?__biz=Mzg3OTU5NzQ1Mw==&mid=2247486121&idx=1&sn=229e7d71ec29980394189589642c10d7&chksm=cf03484bf874c15d4491fc200abd420977a2125a1a114ca71ad243835fd6e2c03d17426fe0ea&token=1760780777&lang=zh_CN#rd)
 
 ## 「学习交流」
 
